@@ -3,85 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendas - Simplificado</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        
-    </style>
+    <title>Vendas</title>
+       <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
-        
-        <div class="header-section">
-            <h1>Vendas Registradas</h1>
-            <div class="action-bar">
-                <div class="search-box">
-                    <input type="text" placeholder="Buscar por Cliente ou Produto...">
-                </div>
-                <button class="btn-primary">Nova Venda</button>
-            </div>
+        <h1> Relatório de Vendas</h1>
+
+        <div class="search-container">
+            <label for="search">Filtrar por Nome do Cliente ou Produto:</label>
+            <input type="text" id="search" placeholder="Digite para buscar..." aria-label="Buscar vendas">
         </div>
 
-        <div class="table-container">
+        <div class="table-wrapper">
             <table class="sales-table">
                 <thead>
                     <tr>
-                        <th class="sortable">Data da Venda</th>
-                        <th class="sortable">Nome do Cliente</th>
-                        <th class="sortable">Nome do Produto</th>
-                        <th class="align-right sortable">Qtd</th>
-                        <th class="align-right sortable">Valor Unitário</th>
-                        <th class="align-right sortable">Valor Total</th>
+                        <th>Data da Venda</th>
+                        <th>Nome do Cliente</th>
+                        <th>Nome do Produto</th>
+                        <th class="quantidade">Quantidade</th>
+                        <th class="valor">Valor Unitário</th>
+                        <th class="valor">Valor Total</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>01/10/2025</td>
-                        <td>Maria Silva</td>
-                        <td>Laptop X1</td>
-                        <td class="align-right">1</td>
-                        <td class="align-right">R$ 4.500,00</td>
-                        <td class="align-right">R$ 4.500,00</td>
+                        <td>Ana Silva</td>
+                        <td>Laptop X500</td>
+                        <td class="quantidade">1</td>
+                        <td class="valor">R$ 3.200,00</td>
+                        <td class="valor">R$ 3.200,00</td>
                     </tr>
                     <tr>
                         <td>01/10/2025</td>
-                        <td>João Oliveira</td>
-                        <td>Mouse Óptico 2</td>
-                        <td class="align-right">2</td>
-                        <td class="align-right">R$ 75,00</td>
-                        <td class="align-right">R$ 150,00</td>
+                        <td>João Santos</td>
+                        <td>Mouse Óptico</td>
+                        <td class="quantidade">3</td>
+                        <td class="valor">R$ 45,90</td>
+                        <td class="valor">R$ 137,70</td>
                     </tr>
                     <tr>
-                        <td>01/10/2025</td>
-                        <td>Ana Souza</td>
-                        <td>Monitor Ultra</td>
-                        <td class="align-right">1</td>
-                        <td class="align-right">R$ 1.200,00</td>
-                        <td class="align-right">R$ 1.200,00</td>
+                        <td>02/10/2025</td>
+                        <td>Maria Souza</td>
+                        <td>Monitor LED 24"</td>
+                        <td class="quantidade">2</td>
+                        <td class="valor">R$ 750,00</td>
+                        <td class="valor">R$ 1.500,00</td>
                     </tr>
                     <tr>
-                        <td>01/10/2025</td>
+                        <td>02/10/2025</td>
                         <td>Pedro Costa</td>
                         <td>Teclado Mecânico</td>
-                        <td class="align-right">1</td>
-                        <td class="align-right">R$ 450,00</td>
-                        <td class="align-right">R$ 450,00</td>
+                        <td class="quantidade">1</td>
+                        <td class="valor">R$ 299,90</td>
+                        <td class="valor">R$ 299,90</td>
+                    </tr>
+                    <tr>
+                        <td>03/10/2025</td>
+                        <td>Ana Silva</td>
+                        <td>Webcam HD</td>
+                        <td class="quantidade">5</td>
+                        <td class="valor">R$ 80,00</td>
+                        <td class="valor">R$ 400,00</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
-        <div class="pagination">
-            <span>Mostrando 1 a 10 de 520 vendas</span>
-            <div class="pagination-controls">
-                <button class="btn-secondary" disabled>Anterior</button>
-                <button class="btn-active">1</button>
-                <button class="btn-secondary">2</button>
-                <button class="btn-secondary">3</button>
-                <button class="btn-secondary">Próxima</button>
-            </div>
-        </div>
     </div>
+    <script src="leitor.js"></script>
 </body>
 </html>
